@@ -6,11 +6,14 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using ProEvento.Api.Data;
 using Microsoft.OpenApi.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ProEvento.Api
 {
@@ -26,6 +29,9 @@ namespace ProEvento.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            string connectionString = Configuration.GetConnectionString("default");
+            services.AddDbContext<DataContext>(x => x.UseSqlite(connectionString));
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -43,7 +49,7 @@ namespace ProEvento.Api
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ProEvento.Api v1"));
             }
-
+            
             app.UseHttpsRedirection();
 
             app.UseRouting();
