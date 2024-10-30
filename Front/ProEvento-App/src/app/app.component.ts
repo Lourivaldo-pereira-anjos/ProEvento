@@ -6,9 +6,6 @@ import {HttpClientModule} from '@angular/common/http'
 import {NavComponent} from './nav/nav.component';
 import { BrowserAnimationsModule ,NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
-import { BrowserModule} from '@angular/platform-browser';
-
-import { NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +15,7 @@ import { NgModule } from '@angular/core';
      PalestrantesComponent,
      HttpClientModule,     
      NavComponent ,     
-     CollapseModule
+     CollapseModule    
      
        ],
   templateUrl: './app.component.html',

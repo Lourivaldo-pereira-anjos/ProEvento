@@ -11,11 +11,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using ProEvento.Api.Data;
+using ProEventos.Api.Data;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace ProEvento.Api
+namespace ProEventos.Api
 {
     public class Startup
     {
@@ -37,7 +37,7 @@ namespace ProEvento.Api
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProEvento.Api", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProEventos.Api", Version = "v1" });
             });
         }
 
@@ -48,7 +48,7 @@ namespace ProEvento.Api
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ProEvento.Api v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ProEventos.Api v1"));
             }
             
             app.UseHttpsRedirection();

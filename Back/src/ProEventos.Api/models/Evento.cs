@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ProEvento.Api.models
+namespace ProEventos.Api.models
 {
     public class Evento
     {

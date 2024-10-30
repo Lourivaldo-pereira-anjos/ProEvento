@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace ProEvento.Api.data.migrations
+namespace ProEventos.Api.data.migrations
 {
     public partial class Inicial : Migration
     {

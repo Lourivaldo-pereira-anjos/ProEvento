@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using ProEvento.Api.Data;
-using ProEvento.Api.models;
+using ProEventos.Api.Data;
+using ProEventos.Api.models;
 
-namespace ProEvento.Api.Controllers;
+namespace ProEventos.Api.Controllers;
 
 [ApiController]
 [Route("Api/[controller]")]

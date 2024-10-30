@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ProEvento.Api.Data;
+using ProEventos.Api.Data;
 
 #nullable disable
 
-namespace ProEvento.Api.data.migrations
+namespace ProEventos.Api.data.migrations
 {
     [DbContext(typeof(DataContext))]
     [Migration("20241019205720_Inicial")]
