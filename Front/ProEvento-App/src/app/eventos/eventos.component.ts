@@ -6,7 +6,7 @@ import { Evento } from '../models/Evento';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { DateTimeFormatPipe } from '../helper/DateTimeFormat.pipe';
 //import { BsModalService } from 'ngx-bootstrap/modal';
-import { ToastrService } from 'ngx-toastr';
+//import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-eventos',
@@ -29,8 +29,8 @@ export class EventosComponent implements OnInit {
   }
   
   constructor(
-    private eventoService: EventoService,    
-    private toastr:ToastrService
+    private eventoService: EventoService    
+    
   )
      {  }
   
@@ -71,7 +71,7 @@ export class EventosComponent implements OnInit {
     )    
   }
   Confirm(): void{
-    this.toastr.success("O eveno foi deletado com sucesso","Deleado" )
+  //  this.toastr.success("O eveno foi deletado com sucesso","Deleado" )
   }
 
 
