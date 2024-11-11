@@ -33,13 +33,20 @@
             [style.width.px]="widthImg"
             [style.margin.px]="MarginImg"
             alt="" width="100"></td>
-        <td>{{item.imageUrl}}</td>        
+        <td>{{item.id}}</td>        
         <td>{{item.tema}}</td>
         <td>{{item.local}}</td> 
-        <td>{{item.dataEvento}}</td>
+        <td>{{item.dataEvento | DateFormaPipe}}</td>
         <td>{{item.qtdPessoas}}</td>
-        <td>{{item.lote}}</td>
-        <td></td>
+        <td>{{item.lotes[0].nome}}</td>
+        <td>
+            <button type="button" class="btn btn-primary btn-sm mr-2" tooltip="Editar">
+                <i class="fa fa-edit"></i>          
+            </button>
+            <button type="button" class="btn btn-danger btn-sm mr-2" tooltip="Excluir" (click)="Confirm()">
+                <i class="fa fa-trash"></i>              
+            </button>
+        </td>
     </tr>
 </Tbody>
 <tfoot *ngIf="!eventos.length">
