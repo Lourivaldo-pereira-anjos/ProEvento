@@ -36,14 +36,14 @@
         <td>{{item.id}}</td>        
         <td>{{item.tema}}</td>
         <td>{{item.local}}</td> 
-        <td>{{item.dataEvento | DateFormaPipe}}</td>
+        <td>{{item.dataEvento }}</td>
         <td>{{item.qtdPessoas}}</td>
         <td>{{item.lotes[0].nome}}</td>
         <td>
-            <button type="button" class="btn btn-primary btn-sm mr-2" tooltip="Editar">
+            <button type="button" class="btn btn-primary btn-sm mr-2" tooltip="Editar" (click)="showSuccess()">
                 <i class="fa fa-edit"></i>          
             </button>
-            <button type="button" class="btn btn-danger btn-sm mr-2" tooltip="Excluir" (click)="Confirm()">
+            <button type="button" class="btn btn-danger btn-sm mr-2" tooltip="Excluir" (click)="showError()">
                 <i class="fa fa-trash"></i>              
             </button>
         </td>

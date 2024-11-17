@@ -17,7 +17,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { MenuDropdownComponent } from "./menu-dropdown/menu-dropdown.component";
-import {ToastrModule} from 'ngx-toastr'
+
 
 @Component({
   selector: 'app-root',
@@ -31,12 +31,11 @@ import {ToastrModule} from 'ngx-toastr'
     CollapseModule,
     FormsModule,
     DropdownComponent,
-    MenuDropdownComponent,
-    ToastrModule
+    MenuDropdownComponent    
   ],
        providers:[EventoService],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',  
 })
 export class AppComponent {
   title = 'ProEvento-App';

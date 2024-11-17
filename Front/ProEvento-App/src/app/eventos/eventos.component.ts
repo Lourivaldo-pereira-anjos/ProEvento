@@ -5,6 +5,7 @@ import { EventoService } from '../services/evento.service';
 import { Evento } from '../models/Evento';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { DateTimeFormatPipe } from '../helper/DateTimeFormat.pipe';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
 //import { BsModalService } from 'ngx-bootstrap/modal';
 //import { ToastrService } from 'ngx-toastr';
 
@@ -17,9 +18,10 @@ import { DateTimeFormatPipe } from '../helper/DateTimeFormat.pipe';
      CommonModule,
      FormsModule,
      DateTimeFormatPipe,
-     TooltipModule,    ],
+     TooltipModule     
+        ],
   templateUrl: './eventos.component.html',
-  styleUrl: './eventos.component.scss'
+  styleUrl: './eventos.component.scss',  
 })
 
 
@@ -29,10 +31,18 @@ export class EventosComponent implements OnInit {
   }
   
   constructor(
-    private eventoService: EventoService    
+    private eventoService: EventoService,
+    private toastr: ToastrService 
     
   )
      {  }
+     showSuccess() {
+      this.toastr.success('Operação realizada com sucesso!', 'Sucesso');
+    }
+  
+    showError() {
+      this.toastr.error('Algo deu errado!', 'Erro');
+    }
   
   public eventos: any = [];
   public IsVisivel: boolean = true;
