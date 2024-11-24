@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { TituloComponent } from "../../shared/titulo/titulo.component";
 
 
 @Component({
   selector: 'app-palestrantes',
   standalone: true,
-  imports: [],
+  imports: [TituloComponent],
   templateUrl: './palestrantes.component.html',
   styleUrls: ['./palestrantes.component.css']
 })

@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { DropdownComponent } from './dropdown/dropdown.component';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {

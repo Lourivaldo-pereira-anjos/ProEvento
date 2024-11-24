@@ -1,0 +1,14 @@
+<div class="d-flex  p-3 my-3 text-white bg-secondary rounded shadow-sm">
+  <div class="d-flex align-items-center mr-auto">
+    <i class="{{icoClass}} mr-3"></i>
+    <div class="lh-10">
+      <h2 class="mb-0 text-white lh-10">{{titulo}}</h2>
+      <small>{{subTitulo}}</small>
+    </div>
+  </div>
+  <div class="p-3 align-items-right" NgIf="isBotaoListar">
+    <button class="btn btn-outline-light" (click)="listar()">
+      Listar {{titulo}}
+    </button>
+  </div>
+</div>
